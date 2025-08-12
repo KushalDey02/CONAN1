@@ -1,4 +1,4 @@
-name: Deploy Jupyter Book to GitHub Pages
+name: Deploy Sphinx site to GitHub Pages
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write  # ✅ allow the action to push to gh-pages
+  contents: write
 
 jobs:
   build-deploy:
@@ -22,9 +22,9 @@ jobs:
           python-version: "3.10"
 
       - name: Install dependencies
-        run: pip install sphinx ghp-import
+        run: pip install -r requirements.txt ghp-import
 
-      - name: Build the book
+      - name: Build the site
         run: sphinx-build content _build/html
 
       - name: Deploy to GitHub Pages
