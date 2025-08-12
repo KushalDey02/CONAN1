@@ -17,11 +17,11 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
 
-project = "Reproducible research"
+project = "CONAN1"
 copyright = "CodeRefinery contributors"
-author = "CodeRefinery contributors"
+author = "Kushal Dey"
 github_user = "coderefinery"
-github_repo_name = "reproducible-research"  # auto-detected from dirname if blank
+github_repo_name = "CONAN1"  # auto-detected from dirname if blank
 github_version = "main"
 conf_py_path = "/content/" # with leading and trailing slash
 
