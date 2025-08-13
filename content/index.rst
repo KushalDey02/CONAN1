@@ -34,6 +34,7 @@ reproducible environments and computational steps** for our future selves and ot
    :maxdepth: 1
    :caption: NTRU
    NTRU.md
+   intro.md
 
 .. toctree::
    :maxdepth: 1
@@ -41,6 +42,7 @@ reproducible environments and computational steps** for our future selves and ot
    :hidden:
 
    intro.md
+   NTRU.md
    motivation.md
    organizing-projects.md
    workflow-management.md
