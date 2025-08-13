@@ -33,6 +33,7 @@ reproducible environments and computational steps** for our future selves and ot
 .. toctree::
    :maxdepth: 1
    :caption: Core episodes
+   :hidden:
 
    intro.md
    motivation.md
@@ -46,6 +47,7 @@ reproducible environments and computational steps** for our future selves and ot
 .. toctree::
    :maxdepth: 1
    :caption: Reference
+   :hidden:
 
    Shell crash course <https://youtu.be/xbTTDLA3txI>
    exercises
@@ -55,6 +57,7 @@ reproducible environments and computational steps** for our future selves and ot
 .. toctree::
    :maxdepth: 1
    :caption: About
+   :hidden:
 
    All lessons <https://coderefinery.org/lessons/core/>
    CodeRefinery <https://coderefinery.org/>
