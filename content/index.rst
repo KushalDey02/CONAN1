@@ -32,6 +32,12 @@ reproducible environments and computational steps** for our future selves and ot
 
 .. toctree::
    :maxdepth: 1
+   :caption: NTRU
+   :hidden:
+   NTRU.md
+
+.. toctree::
+   :maxdepth: 1
    :caption: Core episodes
    :hidden:
 
