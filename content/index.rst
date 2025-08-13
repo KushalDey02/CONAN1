@@ -1,6 +1,6 @@
 .. _index:
 
-Reproducible research - Preparing code to be usable by you and others in the future
+CONAN - Constructive...
 ===================================================================================
 
 Have you ever spent days **trying to repeat the results from few weeks or months
@@ -35,8 +35,14 @@ reproducible environments and computational steps** for our future selves and ot
    :caption: NTRU
    :hidden:
 
-   intro.md
    NTRU.md
+
+.. toctree::
+   :maxdepth: 1
+   :caption: NTRU
+   :hidden:
+
+   Lattice.md
 
 .. toctree::
    :maxdepth: 1
@@ -44,7 +50,6 @@ reproducible environments and computational steps** for our future selves and ot
    :hidden:
 
    intro.md
-   NTRU.md
    motivation.md
    organizing-projects.md
    workflow-management.md
