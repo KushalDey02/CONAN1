@@ -39,7 +39,7 @@ reproducible environments and computational steps** for our future selves and ot
 
 .. toctree::
    :maxdepth: 1
-   :caption: NTRU
+   :caption: Lattice
    :hidden:
 
    Lattice.md
