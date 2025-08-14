@@ -1,36 +1,35 @@
-# Configuration file for the Sphinx documentation builder.
-
 import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
-
 project = "CONAN1"
 copyright = "KushalDey02"
 author = "Kushal Dey"
 github_user = "KushalDey02"
-github_repo_name = "CONAN1"  # auto-detected from dirname if blank
+github_repo_name = "CONAN1"
 github_version = "main"
-conf_py_path = "/content/"  # with leading and trailing slash
+conf_py_path = "/content/"
 
 # -- General configuration ---------------------------------------------------
-
 extensions = [
-    # GitHub pages
     "sphinx.ext.githubpages",
-    # CodeRefinery lesson structure
     "sphinx_lesson",
-    # Theme accessibility fixes
     "sphinx_rtd_theme_ext_color_contrast",
     "sphinx_coderefinery_branding",
-    # Math support
-    "sphinx.ext.mathjax",
-    # MyST Markdown parser
-    "myst_parser",
+    "sphinx.ext.mathjax",   # MathJax for LaTeX in HTML
+    "myst_parser",          # MyST Markdown parser with math support
 ]
 
-nb_execution_mode = "cache"
+# MyST configuration for math
+myst_enable_extensions = [
+    "amsmath",     # Allow LaTeX amsmath
+    "dollarmath",  # Support $...$ and $$...$$
+]
+
+# Don't redefine .md if already set
+# Sphinx will detect `.rst` and `.md` automatically via myst_parser
+# No need for: source_suffix = {'.rst': 'restructuredtext', '.md': 'markdown'}
 
 exclude_patterns = [
     "examples",
@@ -43,19 +42,11 @@ exclude_patterns = [
     "img/README.md",
 ]
 
-# Enable MyST extensions (including LaTeX math support)
-myst_enable_extensions = [
-    "amsmath",    # AMS LaTeX math environments
-    "dollarmath", # Inline and block math with $...$ and $$...$$
-]
-
 # -- Options for HTML output -------------------------------------------------
-
 html_theme = "sphinx_rtd_theme"
 
 # HTML context
 from os.path import basename, dirname, realpath
-
 html_context = {
     "display_github": True,
     "github_user": github_user,
@@ -64,10 +55,4 @@ html_context = {
     "conf_py_path": conf_py_path,
 }
 
-if os.environ.get('GITHUB_REF', '') == 'refs/heads/' + github_version:
-    html_js_files = [
-        (
-            'https://plausible.cs.aalto.fi/js/script.js',
-            {"data-domain": "coderefinery.github.io", "defer": "defer"}
-        ),
-    ]
+if os.environ.get('GITHUB_REF', '') == 'refs/heads/' + github_
