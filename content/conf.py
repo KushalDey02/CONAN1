@@ -1,35 +1,41 @@
+# Configuration file for the Sphinx documentation builder.
+
+# -- Path setup --------------------------------------------------------------
+
 import os
 import sys
+from os.path import basename, dirname, realpath
+
 sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
+
 project = "CONAN1"
 copyright = "KushalDey02"
 author = "Kushal Dey"
 github_user = "KushalDey02"
-github_repo_name = "CONAN1"
+github_repo_name = "CONAN1"  # auto-detected from dirname if blank
 github_version = "main"
-conf_py_path = "/content/"
+conf_py_path = "/content/"  # with leading and trailing slash
 
 # -- General configuration ---------------------------------------------------
+
 extensions = [
-    "sphinx.ext.githubpages",
-    "sphinx_lesson",
-    "sphinx_rtd_theme_ext_color_contrast",
-    "sphinx_coderefinery_branding",
-    "sphinx.ext.mathjax",   # MathJax for LaTeX in HTML
-    "myst_parser",          # MyST Markdown parser with math support
+    "sphinx.ext.githubpages",             # Add .nojekyll file for GitHub Pages
+    "sphinx_lesson",                       # Lesson-style formatting
+    "sphinx_rtd_theme_ext_color_contrast", # RTD theme accessibility
+    "sphinx_coderefinery_branding",        # Branding
+    "sphinx.ext.mathjax",                  # MathJax for LaTeX math
+    "myst_parser",                         # MyST Markdown parser
 ]
 
-# MyST configuration for math
+# Enable MyST extensions for math
 myst_enable_extensions = [
-    "amsmath",     # Allow LaTeX amsmath
-    "dollarmath",  # Support $...$ and $$...$$
+    "amsmath",     # AMS math environments
+    "dollarmath",  # Inline and display math with $...$ and $$...$$
 ]
 
-# Don't redefine .md if already set
-# Sphinx will detect `.rst` and `.md` automatically via myst_parser
-# No need for: source_suffix = {'.rst': 'restructuredtext', '.md': 'markdown'}
+nb_execution_mode = "cache"
 
 exclude_patterns = [
     "examples",
@@ -43,10 +49,9 @@ exclude_patterns = [
 ]
 
 # -- Options for HTML output -------------------------------------------------
+
 html_theme = "sphinx_rtd_theme"
 
-# HTML context
-from os.path import basename, dirname, realpath
 html_context = {
     "display_github": True,
     "github_user": github_user,
@@ -55,4 +60,11 @@ html_context = {
     "conf_py_path": conf_py_path,
 }
 
-if os.environ.get('GITHUB_REF', '') == 'refs/heads/' + github_
+# Add Plausible analytics only on the main branch
+if os.environ.get('GITHUB_REF', '') == 'refs/heads/' + github_version:
+    html_js_files = [
+        ('https://plausible.cs.aalto.fi/js/script.js', {
+            "data-domain": "coderefinery.github.io",
+            "defer": "defer"
+        }),
+    ]
