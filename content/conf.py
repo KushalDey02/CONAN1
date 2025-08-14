@@ -21,18 +21,17 @@ conf_py_path = "/content/"  # with leading and trailing slash
 # -- General configuration ---------------------------------------------------
 
 extensions = [
-    "sphinx.ext.githubpages",             # Add .nojekyll file for GitHub Pages
-    "sphinx_lesson",                       # Lesson-style formatting
-    "sphinx_rtd_theme_ext_color_contrast", # RTD theme accessibility
-    "sphinx_coderefinery_branding",        # Branding
-    "sphinx.ext.mathjax",                  # MathJax for LaTeX math
-    "myst_parser",                         # MyST Markdown parser
+    "sphinx.ext.githubpages",
+    "sphinx_lesson",
+    "sphinx_rtd_theme_ext_color_contrast",
+    "sphinx_coderefinery_branding",
+    "sphinx.ext.mathjax",
 ]
 
-# Enable MyST extensions for math
+# Enable MyST math extensions only if MyST is already loaded from other extensions
 myst_enable_extensions = [
-    "amsmath",     # AMS math environments
-    "dollarmath",  # Inline and display math with $...$ and $$...$$
+    "amsmath",
+    "dollarmath",
 ]
 
 nb_execution_mode = "cache"
