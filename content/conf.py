@@ -37,6 +37,8 @@ extensions = [
     # remove once sphinx_rtd_theme updated for contrast and accessibility:
     "sphinx_rtd_theme_ext_color_contrast",
     "sphinx_coderefinery_branding",
+    # Math equations
+    "sphinx.ext.mathjax",
 ]
 
 nb_execution_mode = "cache"
