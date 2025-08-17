@@ -31,9 +31,11 @@ Img1 -
 :alt: Sudoku
 :width: 80%
 :align: center
+```
 
 Table1 - 
 ```{csv-table} Model Summary
 :header: "accuracy", "val_accuracy", "loss", "val_loss"
 :file: table/summary.csv
 :widths: 20, 20, 20, 20
+```
