@@ -31,7 +31,7 @@ Img1 -
 ![Sudoku](/CONAN/content/img/img1.png)
 
 Img1 - 
-```{figure} /img/img1.jpg
+```{figure} /CONAN/content/img/img1.jpg
 :alt: "Sudoku"
 :width: 100%
 ```
