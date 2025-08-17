@@ -32,6 +32,7 @@ extensions = [
 myst_enable_extensions = [
     "amsmath",
     "dollarmath",
+    "colon_fence",   # <-- Add this to support ```{csv-table} in .md files
 ]
 
 nb_execution_mode = "cache"
