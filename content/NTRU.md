@@ -29,3 +29,10 @@ Poly mul - $ (f \circledast g)(x) = \sum_{k=0}^{n-1} \left( \sum_{i=0}^{n-1} f_i
 
 Img1 - 
 ![Sudoku](/CONAN/content/img/img1.png)
+
+Img1 - 
+```{figure} /img/img1.jpg
+:alt: "Sudoku"
+:width: 100%
+```
+
