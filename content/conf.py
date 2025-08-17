@@ -26,6 +26,7 @@ extensions = [
     "sphinx_rtd_theme_ext_color_contrast",
     "sphinx_coderefinery_branding",
     "sphinx.ext.mathjax",
+    "myst_parser",
 ]
 
 # Enable MyST math extensions only if MyST is already loaded from other extensions
