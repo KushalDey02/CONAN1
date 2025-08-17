@@ -25,3 +25,7 @@ h_k = \sum_{i=0}^{n-1} f_i \, g_{(k-i) \bmod n},
 $
 
 Poly mul - $ (f \circledast g)(x) = \sum_{k=0}^{n-1} \left( \sum_{i=0}^{n-1} f_i \, g_{(k-i) \bmod n} \right) x^k $
+
+
+Img1 - 
+![Sudoku](/CONAN/content/img/img1.png)
