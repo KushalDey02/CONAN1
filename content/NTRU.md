@@ -26,12 +26,14 @@ $
 
 Poly mul - $ (f \circledast g)(x) = \sum_{k=0}^{n-1} \left( \sum_{i=0}^{n-1} f_i \, g_{(k-i) \bmod n} \right) x^k $
 
-
-Img1 - 
-![Sudoku](/CONAN/content/img/img1.png)
-
 Img1 -
 ```{figure} img/img1.png
 :alt: Sudoku
 :width: 80%
 :align: center
+
+Table1 - 
+```{csv-table} Model Summary
+:header: "accuracy", "val_accuracy", "loss", "val_loss"
+:file: table/summary.csv
+:widths: 20, 20, 20, 20
